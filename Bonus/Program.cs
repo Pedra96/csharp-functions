@@ -21,7 +21,8 @@ StampaArrayInteri(arrayNumeri);
 Console.Write("Somma dei numeri nell array: ");
 Console.WriteLine(Summ(arrayNumeri));
 Console.Write("Somma dei numeri nell array elevati al quadrato: ");
-Console.WriteLine(ToSquare(Summ(arrayNumeri)));
+Console.WriteLine(Summ(ArrayToSquare(arrayNumeri)));
+Console.WriteLine("Grazie per aver usato questo script spero sia stato di tuo gradimento");
 
 //All function here-----------------------------------------------------
 
@@ -79,6 +80,7 @@ int Summ(int[] arrayDaSommare) {
 
 void Wait() {
     string evilplan = "Calcolo dell'array è bello pesante ci vorrà un po'... attendere...";
+    Console.WriteLine(evilplan.Length);
     for (int i = 0; i < evilplan.Length; i++) {
         if (i == evilplan.Length - 1) {
             Console.WriteLine(evilplan[i]);

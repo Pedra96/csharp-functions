@@ -27,7 +27,7 @@ StampaArrayInteri(arrayNumeri);
 Console.Write("Somma dei numeri nell array: ");
 Console.WriteLine(Summ(arrayNumeri));
 Console.Write("Somma dei numeri nell array elevati al quadrato: ");
-Console.WriteLine(ToSquare(Summ(arrayNumeri)));
+Console.WriteLine(Summ(ArrayToSquare(arrayNumeri)));
 //All function here-----------------------------------------------------
 
 void StampaArrayInteri(int[] arrayInteri) {
