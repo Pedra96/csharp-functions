@@ -11,17 +11,23 @@ Stampare l’array di numeri fornito a video, dove ogni numero è stato prima el
 Stampare la somma di tutti i numeri
 Stampare la somma di tutti i numeri elevati al quadrati*/
 
-
+//Variable here----------------------------------------------------------
 int numeroUtente = 12;
 int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+Console.Write("Stampa a video dell array: ");
 StampaArrayInteri(arrayNumeri);
+Console.Write("Numero singolo: ");
 Console.WriteLine(numeroUtente);
+Console.Write("Numero singolo elevato al quadrato: ");
 Console.WriteLine(ToSquare(numeroUtente));
-
-StampaArrayInteri(ElevaArrayAlQuadrato(arrayNumeri));
-
-
-
+Console.Write("Array di numeri elevato al quadrato: ");
+StampaArrayInteri(ArrayToSquare(arrayNumeri));
+Console.Write("Vecchio array di numeri: ");
+StampaArrayInteri(arrayNumeri);
+Console.Write("Somma dei numeri nell array: ");
+Console.WriteLine(Summ(arrayNumeri));
+Console.Write("Somma dei numeri nell array elevati al quadrato: ");
+Console.WriteLine(ToSquare(Summ(arrayNumeri)));
 //All function here-----------------------------------------------------
 
 void StampaArrayInteri(int[] arrayInteri) {
@@ -44,10 +50,18 @@ int ToSquare(int n) {
     return n * n;
 }
 
-int[] ElevaArrayAlQuadrato(int[] arrayNum) {
+int[] ArrayToSquare(int[] arrayNum) {
     int[] copiaArray = (int[])arrayNum.Clone();
     for (int i = 0; i < arrayNum.Length; i++) {
-        copiaArray[i] = copiaArray[i] * copiaArray[i];
+        copiaArray[i] = ToSquare(copiaArray[i]);
     }
     return copiaArray;
+}
+
+int Summ(int[] arrayDaSommare) {
+    int somma = 0;
+    foreach(int numero in arrayDaSommare){
+        somma += numero;
+    }
+    return somma;
 }
